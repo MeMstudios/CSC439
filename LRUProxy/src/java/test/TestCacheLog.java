@@ -5,24 +5,17 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.stream.Stream;
 
-
 /**
  * Created by ethan on 9/21/16.
  * CSC 439 -- Team 3
  */
 
-//NOTE: Change the value of the srcPath variable before trying to
-    //run this code. I hard to hard-code in the full path because my
-    //machine was being a jerk.
-    //
-    //Some exceptions will be raised if this test file is run
-    //without an output.log file in /testdir. These exceptions are
-    //handled by CacheLog.java, and the file will be created if it did
-    //not exist previously once logRemovalTest() is called
+//NOTE:
+    //fixed paths, should work with new directory structure
 public class TestCacheLog {
 
     //Path to whatever folder
-    private String srcPath = "/home/ethan/Documents/CSC-439/LRUProxy/src";
+    private String srcPath = "LRUProxy/src/java/test";
     private String testdir = "/testdir";
     private String output = "/output.log";
 
@@ -62,6 +55,7 @@ public class TestCacheLog {
     //Test that the logfile was created properly
     @Test
     public void logFileTest(){
+        System.out.println(System.getProperty("user.dir"));
         long cnt = countLines( srcPath + testdir + output);
         CacheLog test = new CacheLog( srcPath + testdir);
         long cnt2 = countLines( srcPath + testdir + output);
