@@ -12,7 +12,7 @@ import org.junit.runners.Suite.SuiteClasses;
 		CacheToFileTest.class
 	})
 
-public class TestSuite { 
+public class TestCacheSuite { 
 	public TestSuite() {
 		System.out.println("Running test suite.");
 	}
