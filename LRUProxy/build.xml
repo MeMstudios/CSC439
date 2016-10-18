@@ -2,7 +2,7 @@
 	<property file="build.properties" />
 	<property name="src.dir" location="src" />
 	<property name="src.java.dir" location="${src.dir}/java" />
-	<property name="src.test.dir" location="#{src.dir}/test" />
+	<property name="src.test.dir" location="${src.dir}/test" />
 	<property name="target.dir" location="target" />
 	<property name="target.classes.java.dir" location="${target.dir}/classes/java" />
 	<property name="target.classes.test.dir" location="${target.dir}/classes/test" />
