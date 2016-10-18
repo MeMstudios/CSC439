@@ -8,7 +8,7 @@ import java.util.Collection;
 
 /* Tests the CacheRequest class by checking that it properly reads in input. */
 @RunWith(value = Parameterized.class)
-public class CacheRequestTest {
+public class TestCacheRequest {
 	
 	private String expected, value;
 	private static String directory;
@@ -23,7 +23,7 @@ public class CacheRequestTest {
 	   return Arrays.asList(data);
 	 }
 		
-	 public CacheRequestTest(String expected) { 
+	 public TestCacheRequest(String expected) { 
 			this.expected = expected;
 			this.value = cacheRequest.read();
 	 }
