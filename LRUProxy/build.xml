@@ -26,5 +26,24 @@
 	</target>
 	
 	<target name="compile" depends="compile.java, compile.test" />
-
+	<target name="test" depends="compile">
+		<mkdir dir="${target.report.dir}"/>
+		<junit printsummary="yes" haltonerror="yes" haltonfailure="yes" fork="yes">
+			<formatter type="xml" />
+			<test name="TestLRUProxy" todir="${target.report.dir}"/>
+				<classpath>
+					<pathelement location="${target.classes.java.dir}"/>
+					<pathelement location="${target.classes.test.dir}"/>
+				</classpath>
+		</junit>
+	</target>
+	<target name="report" depends="test">
+		<mkdir dir="${target.report.dir}/html"/>
+		<junitreport todir="${target.report.dir}">
+			<fileset dir="${target.report.dir}">
+				<include name="TEST-*.xml"/>
+			</filset>
+			<report todir="${target.report.dir}/html"/>
+		</junitreport>
+	</target>
 </project>
