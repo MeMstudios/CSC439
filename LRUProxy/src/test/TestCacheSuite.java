@@ -6,10 +6,10 @@ import org.junit.runners.Suite.SuiteClasses;
 /* All test classes to be included in the suite are listed here. Add
  * other test classes as necessary. */
 @SuiteClasses( value={
-		CacheListTest.class,
-		CacheLogTest.class,
-		CacheRequestTest.class,
-		CacheToFileTest.class
+		TestCacheList.class,
+		TestCacheLog.class,
+		TestCacheRequest.class,
+		TestCacheToFile.class
 	})
 
 public class TestCacheSuite { 
