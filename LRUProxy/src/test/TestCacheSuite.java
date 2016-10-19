@@ -13,7 +13,7 @@ import org.junit.runners.Suite.SuiteClasses;
 	})
 
 public class TestCacheSuite { 
-	public TestSuite() {
+	public void TestSuite() {
 		System.out.println("Running test suite.");
 	}
 }
