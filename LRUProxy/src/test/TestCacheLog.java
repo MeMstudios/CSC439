@@ -15,7 +15,7 @@ import java.util.stream.Stream;
 public class TestCacheLog {
 
     //Path to whatever folder
-    private String srcPath = "LRUProxy/src/java/test";
+    private String srcPath = "LRUProxy/src/test";
     private String testdir = "/testdir";
     private String output = "/output.log";
 
