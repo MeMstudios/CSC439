@@ -1,9 +1,11 @@
+package test;
+
 import org.junit.*;
 import static org.junit.Assert.*;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 import org.junit.runner.RunWith;
-
+import lruproxy.CacheRequest;
 import java.io.File;
 import java.util.Arrays;
 import java.util.Collection;
@@ -36,14 +38,18 @@ public class TestCacheRequest {
 	 @BeforeClass
 	 public static void getDirectory() {
 		 Scanner scanner = new Scanner(System.in);
-		 String message = "Enter directory of input.txt file: ";
+
+
+		 /*  String message = "Enter directory of input.txt file: ";
 		 
 		 do {
 			 System.out.print(message);
 			 directory = scanner.nextLine();
 			 message = "Invalid directory. Please enter an actual directory: ";
 		 } while(!(new File(directory)).exists());
-		 
+		 */
+
+		 directory = "LRUProxy" + File.separator + "data" + File.separator;
 		 
 		 cacheRequest = new CacheRequest(directory);
 	 }

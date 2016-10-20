@@ -1,14 +1,26 @@
 <project name="LRUProxy" default="report" >
 	<property file="build.properties" />
 	<property name="src.dir" location="src" />
-	<property name="src.java.dir" location="${src.dir}/java" />
+	<property name="src.lruproxy.dir" location="${src.dir}/java" />
 	<property name="src.test.dir" location="${src.dir}/test" />
 	<property name="target.dir" location="target" />
-	<property name="target.classes.java.dir" location="${target.dir}/classes/java" />
+	<property name="target.classes.lruproxy.dir" location="${target.dir}/classes/lruproxy" />
 	<property name="target.classes.test.dir" location="${target.dir}/classes/test" />
 	<property name="target.report.dir" location="${target.dir}/report" />
 	
 	<target name="checkout.repository" description="checkout code">
+		<macrodef name = "git">
+			<attribute name = "command" />
+			<attribute name = "dir" default = "" />
+			<element name = "args" optional = "true" />
+			<sequential>
+				<echo message = "git @{command}" />
+				<exec executable = "git" dir = "@{dir}"  failonerror="true">
+					<arg value = "@{command}" />
+					<args/>
+				</exec>
+			</sequential>
+		</macrodef>
 		<git command = "clone">
 			<args>
 				<arg value = "https://github.com/murphym2/CSC439.git" />
@@ -18,9 +30,9 @@
 	</target>
 	
 	<target name="compile.java" depends="checkout.repository">
-			<mkdir dir="${target.classes.java.dir}" />
-			<javac destdir="${target.classes.java.dir}" >
-				<src path="${src.java.dir}" />
+			<mkdir dir="${target.classes.lruproxy.dir}" />
+			<javac destdir="${target.classes.lruproxy.dir}" >
+				<src path="${src.lruproxy.dir}" />
 			</javac>
 	</target>
 		
@@ -29,7 +41,7 @@
 			<javac destdir="${target.classes.test.dir}" >
 				<src path="${src.test.dir}" />
 				<classpath>
-					<pathelement location="${target.classes.java.dir}" />
+					<pathelement location="${target.classes.lruproxy.dir}" />
 				</classpath>
 			</javac>
 	</target>
@@ -41,7 +53,7 @@
 			<formatter type="xml" />
 			<test name="TestLRUProxy" todir="${target.report.dir}"/>
 				<classpath>
-					<pathelement location="${target.classes.java.dir}"/>
+					<pathelement location="${target.classes.lruproxy.dir}"/>
 					<pathelement location="${target.classes.test.dir}"/>
 				</classpath>
 		</junit>
@@ -51,7 +63,7 @@
 		<junitreport todir="${target.report.dir}">
 			<fileset dir="${target.report.dir}">
 				<include name="TEST-*.xml"/>
-			</filset>
+			</fileset>
 			<report todir="${target.report.dir}/html"/>
 		</junitreport>
 	</target>

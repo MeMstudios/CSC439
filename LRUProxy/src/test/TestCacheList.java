@@ -1,10 +1,12 @@
+package test;
+
 /*
  * @author Nathen Lyman
  * @since Oct 5, 2016
  * 
  */
-package lruproxy;
 
+import java.io.File;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Random;
@@ -15,9 +17,10 @@ import org.junit.experimental.runners.Enclosed;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
+import lruproxy.CacheList;
 
 @RunWith(Enclosed.class)
-public class CacheListTest {
+public class TestCacheList {
 
     @RunWith(value = Parameterized.class)
     public static class CacheListParam {
@@ -26,6 +29,8 @@ public class CacheListTest {
         private int CurrentSize;
         private String ExpectedVal;
         private CacheList instance;
+        private String directory = "LRUProxy" + File.separator + "src" + File.separator + "test" + File.separator +
+                "testdir";
         private final String[] Websites = {"www.google.com", "www.facebook.com", "www.youtube.com",
             "www.nku.edu", "www.amazon.com", "www.someothersite.com"};
 
@@ -47,7 +52,7 @@ public class CacheListTest {
         @Before
         public void setUp() {
             boolean hit = false; // Ignoreing hit because CacheLog broken
-            this.instance = new CacheList("", this.CacheSize);
+            this.instance = new CacheList(directory, this.CacheSize);
             for (String Website : this.Websites) {
                 instance.addNewObject(Website, hit);
             }
@@ -60,7 +65,7 @@ public class CacheListTest {
         public void testAddNewObject() {
             String URL = "www.google.com";
             boolean hit = false; // Ignoreing hit because CacheLog broken
-            System.out.println("addNewObject: CaheSize = " + this.CacheSize + " | Expected return to be " + this.ExpectedVal);
+            System.out.println("addNewObject: CacheSize = " + this.CacheSize + " | Expected return to be " + this.ExpectedVal);
             assertEquals(this.ExpectedVal, instance.addNewObject(URL, hit));
         }
 
@@ -69,7 +74,7 @@ public class CacheListTest {
          */
         @Test
         public void testGetCacheSize() {
-            System.out.println("getCacheSize: CaheSize = " + this.CurrentSize + " | Expected return to be " + this.CurrentSize
+            System.out.println("getCacheSize: CacheSize = " + this.CurrentSize + " | Expected return to be " + this.CurrentSize
                     + " and got " + instance.getCacheSize());
 
             assertEquals(this.CurrentSize, instance.getCacheSize());

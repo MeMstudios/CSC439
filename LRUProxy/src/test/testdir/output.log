@@ -4,3 +4,288 @@ Sun September 25 20:08:06 2016  cache miss
 Sun September 25 20:08:06 2016  the cached page is evicted
 Sun September 25 20:08:06 2016  cache hit
 Sun September 25 20:08:06 2016  cache miss
+Wed October 19 15:57:28 2016  cache hit
+Wed October 19 15:57:28 2016  the cached page is evicted
+Wed October 19 15:57:28 2016  cache miss
+Wed October 19 15:57:28 2016  cache hit
+Wed October 19 15:57:28 2016  cache miss
+Wed October 19 15:57:28 2016  the cached page is evicted
+Thu October 20 15:50:03 2016  cache hit
+Thu October 20 15:50:03 2016  the cached page is evicted
+Thu October 20 15:50:03 2016  cache miss
+Thu October 20 15:50:03 2016  cache hit
+Thu October 20 15:50:03 2016  cache miss
+Thu October 20 15:50:03 2016  the cached page is evicted
+Thu October 20 15:55:36 2016  cache hit
+Thu October 20 15:55:36 2016  the cached page is evicted
+Thu October 20 15:55:36 2016  cache miss
+Thu October 20 15:55:36 2016  cache hit
+Thu October 20 15:55:36 2016  cache miss
+Thu October 20 15:55:36 2016  the cached page is evicted
+Thu October 20 16:01:46 2016  cache hit
+Thu October 20 16:01:46 2016  the cached page is evicted
+Thu October 20 16:01:46 2016  cache miss
+Thu October 20 16:01:46 2016  cache hit
+Thu October 20 16:01:46 2016  cache miss
+Thu October 20 16:01:46 2016  the cached page is evicted
+Thu October 20 16:02:28 2016  cache hit
+Thu October 20 16:02:28 2016  the cached page is evicted
+Thu October 20 16:02:28 2016  cache miss
+Thu October 20 16:02:28 2016  cache hit
+Thu October 20 16:02:28 2016  cache miss
+Thu October 20 16:02:28 2016  the cached page is evicted
+Thu October 20 16:04:42 2016  cache hit
+Thu October 20 16:04:42 2016  the cached page is evicted
+Thu October 20 16:04:42 2016  cache miss
+Thu October 20 16:04:42 2016  cache hit
+Thu October 20 16:04:42 2016  cache miss
+Thu October 20 16:04:42 2016  the cached page is evicted
+Thu October 20 16:07:22 2016  cache hit
+Thu October 20 16:07:22 2016  the cached page is evicted
+Thu October 20 16:07:22 2016  cache miss
+Thu October 20 16:07:22 2016  cache hit
+Thu October 20 16:07:22 2016  cache miss
+Thu October 20 16:07:22 2016  the cached page is evicted
+Thu October 20 16:08:43 2016  cache hit
+Thu October 20 16:08:43 2016  the cached page is evicted
+Thu October 20 16:08:43 2016  cache miss
+Thu October 20 16:08:43 2016  cache hit
+Thu October 20 16:08:43 2016  cache miss
+Thu October 20 16:08:43 2016  the cached page is evicted
+Thu October 20 16:12:24 2016  cache hit
+Thu October 20 16:12:24 2016  the cached page is evicted
+Thu October 20 16:12:24 2016  cache miss
+Thu October 20 16:12:24 2016  cache hit
+Thu October 20 16:12:24 2016  cache miss
+Thu October 20 16:12:24 2016  the cached page is evicted
+Thu October 20 16:15:23 2016  cache hit
+Thu October 20 16:15:23 2016  the cached page is evicted
+Thu October 20 16:15:23 2016  cache miss
+Thu October 20 16:15:23 2016  cache hit
+Thu October 20 16:15:23 2016  cache miss
+Thu October 20 16:15:23 2016  the cached page is evicted
+Thu October 20 16:21:30 2016  cache hit
+Thu October 20 16:21:30 2016  the cached page is evicted
+Thu October 20 16:21:30 2016  cache miss
+Thu October 20 16:21:30 2016  cache hit
+Thu October 20 16:21:30 2016  cache miss
+Thu October 20 16:21:30 2016  the cached page is evicted
+Thu October 20 16:21:47 2016 www.google.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.facebook.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.youtube.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.nku.edu the cached page is evicted
+Thu October 20 16:21:47 2016 www.amazon.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.google.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.facebook.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.youtube.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.nku.edu the cached page is evicted
+Thu October 20 16:21:47 2016 www.amazon.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.someothersite.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.google.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.facebook.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.youtube.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.nku.edu the cached page is evicted
+Thu October 20 16:21:47 2016 www.amazon.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.google.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.facebook.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.youtube.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.nku.edu the cached page is evicted
+Thu October 20 16:21:47 2016 www.amazon.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.google.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.facebook.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.youtube.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.nku.edu the cached page is evicted
+Thu October 20 16:21:47 2016 www.amazon.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.someothersite.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.google.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.facebook.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.youtube.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.nku.edu the cached page is evicted
+Thu October 20 16:21:47 2016 www.amazon.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.google.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.facebook.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.youtube.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.nku.edu the cached page is evicted
+Thu October 20 16:21:47 2016 www.google.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.facebook.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.youtube.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.nku.edu the cached page is evicted
+Thu October 20 16:21:47 2016 www.amazon.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.google.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.facebook.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.youtube.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.nku.edu the cached page is evicted
+Thu October 20 16:21:47 2016 www.google.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.facebook.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.youtube.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.google.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.facebook.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.youtube.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.nku.edu the cached page is evicted
+Thu October 20 16:21:47 2016 www.google.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.facebook.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.youtube.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.google.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.facebook.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.google.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.facebook.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.youtube.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.google.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.facebook.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.google.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.google.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.facebook.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.google.com the cached page is evicted
+Thu October 20 16:21:47 2016 www.google.com the cached page is evicted
+Thu October 20 16:21:47 2016  cache hit
+Thu October 20 16:21:47 2016  the cached page is evicted
+Thu October 20 16:21:47 2016  cache miss
+Thu October 20 16:21:47 2016  cache hit
+Thu October 20 16:21:47 2016  cache miss
+Thu October 20 16:21:47 2016  the cached page is evicted
+Thu October 20 16:23:59 2016 www.google.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.facebook.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.youtube.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.nku.edu the cached page is evicted
+Thu October 20 16:23:59 2016 www.amazon.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.google.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.facebook.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.youtube.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.nku.edu the cached page is evicted
+Thu October 20 16:23:59 2016 www.amazon.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.someothersite.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.google.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.facebook.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.youtube.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.nku.edu the cached page is evicted
+Thu October 20 16:23:59 2016 www.amazon.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.google.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.facebook.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.youtube.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.nku.edu the cached page is evicted
+Thu October 20 16:23:59 2016 www.amazon.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.google.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.facebook.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.youtube.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.nku.edu the cached page is evicted
+Thu October 20 16:23:59 2016 www.amazon.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.someothersite.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.google.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.facebook.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.youtube.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.nku.edu the cached page is evicted
+Thu October 20 16:23:59 2016 www.amazon.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.google.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.facebook.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.youtube.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.nku.edu the cached page is evicted
+Thu October 20 16:23:59 2016 www.google.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.facebook.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.youtube.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.nku.edu the cached page is evicted
+Thu October 20 16:23:59 2016 www.amazon.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.google.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.facebook.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.youtube.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.nku.edu the cached page is evicted
+Thu October 20 16:23:59 2016 www.google.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.facebook.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.youtube.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.google.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.facebook.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.youtube.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.nku.edu the cached page is evicted
+Thu October 20 16:23:59 2016 www.google.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.facebook.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.youtube.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.google.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.facebook.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.google.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.facebook.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.youtube.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.google.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.facebook.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.google.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.google.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.facebook.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.google.com the cached page is evicted
+Thu October 20 16:23:59 2016 www.google.com the cached page is evicted
+Thu October 20 16:24:00 2016  cache hit
+Thu October 20 16:24:00 2016  the cached page is evicted
+Thu October 20 16:24:00 2016  cache miss
+Thu October 20 16:24:00 2016  cache hit
+Thu October 20 16:24:00 2016  cache miss
+Thu October 20 16:24:00 2016  the cached page is evicted
+Thu October 20 16:24:30 2016 www.google.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.facebook.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.youtube.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.nku.edu the cached page is evicted
+Thu October 20 16:24:30 2016 www.amazon.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.google.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.facebook.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.youtube.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.nku.edu the cached page is evicted
+Thu October 20 16:24:30 2016 www.amazon.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.someothersite.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.google.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.facebook.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.youtube.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.nku.edu the cached page is evicted
+Thu October 20 16:24:30 2016 www.amazon.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.google.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.facebook.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.youtube.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.nku.edu the cached page is evicted
+Thu October 20 16:24:30 2016 www.amazon.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.google.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.facebook.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.youtube.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.nku.edu the cached page is evicted
+Thu October 20 16:24:30 2016 www.amazon.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.someothersite.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.google.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.facebook.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.youtube.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.nku.edu the cached page is evicted
+Thu October 20 16:24:30 2016 www.amazon.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.google.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.facebook.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.youtube.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.nku.edu the cached page is evicted
+Thu October 20 16:24:30 2016 www.google.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.facebook.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.youtube.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.nku.edu the cached page is evicted
+Thu October 20 16:24:30 2016 www.amazon.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.google.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.facebook.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.youtube.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.nku.edu the cached page is evicted
+Thu October 20 16:24:30 2016 www.google.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.facebook.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.youtube.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.google.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.facebook.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.youtube.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.nku.edu the cached page is evicted
+Thu October 20 16:24:30 2016 www.google.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.facebook.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.youtube.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.google.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.facebook.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.google.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.facebook.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.youtube.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.google.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.facebook.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.google.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.google.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.facebook.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.google.com the cached page is evicted
+Thu October 20 16:24:30 2016 www.google.com the cached page is evicted
+Thu October 20 16:24:30 2016  cache hit
+Thu October 20 16:24:30 2016  the cached page is evicted
+Thu October 20 16:24:30 2016  cache miss
+Thu October 20 16:24:30 2016  cache hit
+Thu October 20 16:24:30 2016  cache miss
+Thu October 20 16:24:30 2016  the cached page is evicted

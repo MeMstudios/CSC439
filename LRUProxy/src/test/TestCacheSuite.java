@@ -1,3 +1,5 @@
+package test;
+
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite.SuiteClasses;
 
@@ -10,9 +12,9 @@ import org.junit.runners.Suite.SuiteClasses;
 		TestCacheLog.class,
 		TestCacheRequest.class,
 		TestCacheToFile.class
-	})
+})
 
-public class TestCacheSuite { 
+public class TestCacheSuite {
 	public TestCacheSuite() {
 		System.out.println("Running test suite.");
 	}
