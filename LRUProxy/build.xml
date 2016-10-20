@@ -1,4 +1,4 @@
-<project name="LRUProxy" default="compile.test" >
+<project name="LRUProxy" default="report" >
 	<property file="build.properties" />
 	<property name="src.dir" location="src" />
 	<property name="src.java.dir" location="${src.dir}/java" />
@@ -17,7 +17,7 @@
 		</git>
 	</target>
 	
-	<target name="compile.java">
+	<target name="compile.java" depends="checkout.repository">
 			<mkdir dir="${target.classes.java.dir}" />
 			<javac destdir="${target.classes.java.dir}" >
 				<src path="${src.java.dir}" />
