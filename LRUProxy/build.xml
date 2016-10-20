@@ -8,6 +8,15 @@
 	<property name="target.classes.test.dir" location="${target.dir}/classes/test" />
 	<property name="target.report.dir" location="${target.dir}/report" />
 	
+	<target name="checkout.repository" description="checkout code">
+		<git command = "clone">
+			<args>
+				<arg value = "https://github.com/murphym2/CSC439.git" />
+				<arg value = "CSC439" />
+			</args>
+		</git>
+	</target>
+	
 	<target name="compile.java">
 			<mkdir dir="${target.classes.java.dir}" />
 			<javac destdir="${target.classes.java.dir}" >
