@@ -12,12 +12,8 @@
 	<path id="classpath">
 		<fileset dir="lib" includes="**/*.jar" />
 	</path>
-
-	<target name="source.check" description="check for source">
-		<available file="/" type="dir" property="source.found"/>
-	</target>
 	
-	<target name="checkout.repository" depends="source.check" description="checkout code" unless="source.found">
+	<target name="checkout.repository" description="checkout code">
 		<macrodef name = "git">
 			<attribute name = "command" />
 			<attribute name = "dir" default = "" />
@@ -30,10 +26,9 @@
 				</exec>
 			</sequential>
 		</macrodef>
-		<git command = "checkout">
+		<git command = "pull">
 			<args>
 				<arg value = "https://github.com/murphym2/CSC439.git" />
-				<arg value = "CSC439" />
 			</args>
 		</git>
 	</target>
