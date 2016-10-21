@@ -12,7 +12,7 @@ import lruproxy.CacheLog;
 /**
  * Created by ethan on 9/21/16.
  * CSC 439 -- Team 3
- * 
+ *
  */
 
 //NOTE:
@@ -20,7 +20,7 @@ import lruproxy.CacheLog;
 public class TestCacheLog {
 
     //Path to whatever folder
-    private String srcPath = "LRUProxy" + File.separator + "src" + File.separator + "test";
+    private String srcPath = "src" + File.separator + "test";
     private String testdir = File.separator + "testdir";
     private String output = File.separator + "output.log";
 

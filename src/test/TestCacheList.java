@@ -29,7 +29,7 @@ public class TestCacheList {
         private int CurrentSize;
         private String ExpectedVal;
         private CacheList instance;
-        private String directory = "LRUProxy" + File.separator + "src" + File.separator + "test" + File.separator +
+        private String directory = "src" + File.separator + "test" + File.separator +
                 "testdir";
         private final String[] Websites = {"www.google.com", "www.facebook.com", "www.youtube.com",
             "www.nku.edu", "www.amazon.com", "www.someothersite.com"};

@@ -16,7 +16,7 @@ import static junit.framework.Assert.assertEquals;
  */
 public class TestCacheToFile {
     CacheToFile cacheToFile;
-    String d = "LRUProxy" + File.separator + "src" + File.separator + "test" + File.separator;
+    String d = /*"LRUProxy" + File.separator +*/ "src" + File.separator + "test" + File.separator;
 
     @Before
     public void before() throws Exception {

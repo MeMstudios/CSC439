@@ -49,7 +49,7 @@ public class TestCacheRequest {
 		 } while(!(new File(directory)).exists());
 		 */
 
-		 directory = "LRUProxy" + File.separator + "data" + File.separator;
+		 directory = "data" + File.separator;
 		 
 		 cacheRequest = new CacheRequest(directory);
 	 }
