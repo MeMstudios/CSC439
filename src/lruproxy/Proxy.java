@@ -39,7 +39,10 @@ public class Proxy
 		String os = System.getProperty("os.name").toLowerCase();
 		windows=(os.indexOf( "win" ) >= 0); 
 
-		this.directory=inDirectory;
+		if ( inDirectory != null ){
+			this.directory=inDirectory;
+		}
+
 		if (windows && ! directory.endsWith("\\"))
 		{
 			directory=directory+"\\";
@@ -171,7 +174,7 @@ public class Proxy
 	
 	public static void main(String args[])
 	{
-		if (args.length!=3)
+		if (args.length==3)
 		{
 			try
 			{
