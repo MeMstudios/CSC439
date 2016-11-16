@@ -1,6 +1,9 @@
 package lruproxy;
 
 import java.util.LinkedList;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.Map.Entry;
 
 /**
  * CacheList
@@ -31,6 +34,7 @@ public class CacheList
 	
 	private CacheLog log; // not used yet
 	private LinkedList<String> linkedList;
+	private Map<String, Integer> frequency = new HashMap<String, Integer>();
 	private int maxSize;
 
 	/**
@@ -52,7 +56,60 @@ public class CacheList
 			this.maxSize=maxsize;
 		}
 	}
+	
+	/**
+	 * addNewObjectLFU
+	 * This puts the object in the front of the queue.
+	 * It removes any repeated object and trims the
+	 * list if the length exceeds maxSize using LFU
+	 * cache replacement.
+	 *
+	 * @param URL - URL that was just requested
+	 * @param hit - true if it was already cached.
+	 * @return - object removed, if any.  We'll need
+	 *           to remove this from the hash.
+	 */
+	public String addNewObjectLFU(String URL, boolean hit)
+	{
+		String removedURL="";
 
+		if (hit)
+		{
+			linkedList.remove(URL);
+		}
+
+		// If size is MAXSIZE, remove last link
+		if (linkedList.size()==maxSize)
+		{
+			removedURL = getLeastFrequent();
+			log.logRemoval(removedURL);
+			linkedList.removeFirstOccurrence(removedURL);
+		}
+
+		// Newest is always the first.
+		linkedList.addFirst(URL);
+		frequency.put(URL, 0);
+
+		return removedURL;
+	}
+
+	/**
+	 * Loops through frequency hashtable and
+	 * finds the URL with the smallest hit count
+	 *
+	 * @return - URL of cache element with smallest hit count.
+	 *
+	 */
+	public String getLeastFrequent(){
+		Entry<String, Integer> min = null;
+		for (Entry<String, Integer> entry : frequency.entrySet()) {
+			if (min == null || min.getValue() > entry.getValue()) {
+				min = entry;
+			}
+		}
+		return min.getKey();
+	}
+	
 	/**
 	 * addNewObjectMRU
 	 * Implements an MRU replacement strategy
@@ -91,7 +148,6 @@ public class CacheList
 
 		return removedURL;
 	}
-
 
 	/**
 	 *
@@ -175,7 +231,52 @@ public class CacheList
 		}
 		return returnedURL;
 	}
+	
+	/**
+	 * getHeadLFU
+	 * Used by CacheListSizeThreeTests
+	 * Increments frequency hit count for URL cache entry
+	 * @return URL at this location or empty string if
+	 *         linkedlist is empty.
+	 */
+	public String getHeadLFU()
+	{
+		int hitcount;
+		String returnedURL="";
+		if (linkedList.size()>0)
+		{
+			returnedURL=linkedList.getFirst().toString();
+			//frequency values cannot exceed maxSize
+			if(frequency.get(returnedURL) < maxSize){
+				frequency.put(returnedURL, frequency.get(returnedURL) + 1);
+			}
 
+		}
+		return returnedURL;
+	}
+	
+	/**
+	 * getLFU
+	 * Increments frequency hit count for URL cache entry
+	 * @param i - index into the linklist.
+	 * @return URL at this location or empty string if
+	 *         param exceeds the size of linked list
+	 */
+	public String getLFU(int i)
+	{
+		int hitcount;
+		String returnedURL="";
+		if (i<linkedList.size())
+		{
+			returnedURL=linkedList.get(i).toString();
+			//frequency values cannot exceed maxSize
+			if(frequency.get(returnedURL) < maxSize){
+				frequency.put(returnedURL, frequency.get(returnedURL) + 1);
+			}
+		}
+		return returnedURL;
+	}
+	
 	/**
 	 * traverseList
 	 * For testing purposes only.  This displays the 
