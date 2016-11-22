@@ -31,11 +31,12 @@ import java.util.Map.Entry;
  */
 public class CacheList 
 {
-	
+	public static final int LRU=0, MRU=1, LFU=2, RANDOM=3;
+
 	private CacheLog log; // not used yet
 	private LinkedList<String> linkedList;
 	private Map<String, Integer> frequency = new HashMap<String, Integer>();
-	private int maxSize;
+	private int maxSize, cacheMethod;
 
 	/**
 	 * Constructor.  The minimum cache size is 1.
@@ -43,7 +44,7 @@ public class CacheList
 	 *                    objects removed from cache
 	 * @param maxsize - maximum number of objects to cache
 	 */
-	public CacheList(String directory, int maxsize)
+	public CacheList(String directory, int maxsize, int cacheMethod)
 	{
 		log = new CacheLog(directory);
 		linkedList=new LinkedList<>();
@@ -55,6 +56,12 @@ public class CacheList
 		{
 			this.maxSize=maxsize;
 		}
+		
+		this.cacheMethod = (cacheMethod>0 && cacheMethod <4) ? cacheMethod : 0;
+	}
+	
+	public CacheList(String directory, int maxsize) {
+		this(directory, maxsize, 0);
 	}
 	
 	/**
@@ -163,6 +170,13 @@ public class CacheList
 	 */
 	public String addNewObject(String URL, boolean hit)
 	{
+		switch(cacheMethod) {
+		case 0: break;
+		case 1: return addNewObjectMRU(URL, hit);
+		case 2: return addNewObjectLFU(URL, hit);
+		case 3: return addNewObjectRandom(URL, hit);
+		}
+		
 		String removedURL="";
 		
 		if (hit)
@@ -185,6 +199,24 @@ public class CacheList
 		//System.out.println("Added "+URL);
 		
 		//traverseTest();
+		
+		return removedURL;
+	}
+	
+	public String addNewObjectRandom(String URL, boolean hit) {
+		String removedURL = "";
+		
+		if(!hit) {
+			
+			if(linkedList.size()==maxSize) {
+				int index = (int)(Math.random() * linkedList.size());
+				removedURL=(String)linkedList.get(index);
+				log.logRemoval(removedURL);
+				linkedList.remove(index);
+			}
+		
+			linkedList.addFirst(URL);
+		}
 		
 		return removedURL;
 	}
