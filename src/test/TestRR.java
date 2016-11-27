@@ -23,9 +23,11 @@ package test;
  * Randomness is difficult to test for, so this file tests for divergence in behavior
  * from an LRU replacement strategy. We find this value by running a parameterized test
  * where the CacheList is filled to capacity, then forcing a replacement by adding one more
- * item to the list. We check this against an expected value for LRU replacement. After running all the parameterized
- * tests we divide the number of times our CacheList acted like a LRU list by the number of times we forced a
- * replacement. If it is greater than zero, our randomness test passes
+ * item to the list. We check the removed URL against an expected value for LRU replacement.
+ * After running all the parameterized tests we divide the number of times our CacheList acted like a
+ * LRU list by the number of times we forced a replacement and subtract this from one.
+ * This gives us the percentage of time our CacheList did not act like an LRU list, and if it is greater than zero
+ * our test passes.
  */
 @RunWith(Enclosed.class)
 public class TestRR {
@@ -33,7 +35,7 @@ public class TestRR {
     @RunWith(value = Parameterized.class)
     public static class CacheListParam {
 
-        private static double hits = 0; //nmer of replacements that behaved like LRU
+        private static double hits = 0; //number of replacements that behaved like LRU
         private static double repl = 0; //number of replacements
         private int CacheSize;
         private int CurrentSize;
