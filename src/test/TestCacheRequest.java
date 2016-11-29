@@ -1,10 +1,15 @@
+package test;
+
 import org.junit.*;
 import static org.junit.Assert.*;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 import org.junit.runner.RunWith;
+import lruproxy.CacheRequest;
+import java.io.File;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.Scanner;
 
 /* Tests the CacheRequest class by checking that it properly reads in input. */
 @RunWith(value = Parameterized.class)
@@ -28,12 +33,25 @@ public class TestCacheRequest {
 			this.value = cacheRequest.read();
 	 }
 		
-	 // Initialize the class by create a CacheRequest object with a directory.
+	 /* Initialize the class by create a CacheRequest object with a directory. Requires the user to
+	  * input the directory of the file, to accommodate different operating systems. */
 	 @BeforeClass
 	 public static void getDirectory() {
-		 directory = System.getProperty("user.dir") +"\\data\\";
+		 Scanner scanner = new Scanner(System.in);
+
+
+		 /*  String message = "Enter directory of input.txt file: ";
+		 
+		 do {
+			 System.out.print(message);
+			 directory = scanner.nextLine();
+			 message = "Invalid directory. Please enter an actual directory: ";
+		 } while(!(new File(directory)).exists());
+		 */
+
+		 directory = "data" + File.separator;
+		 
 		 cacheRequest = new CacheRequest(directory);
-		 System.out.println("Assumed directory of input.txt: "+directory);
 	 }
 	
 	 // Check that the input read in equals the assumed value.

@@ -1,10 +1,28 @@
-/*
- * @author Nathen Lyman
- * @since Oct 5, 2016
- * 
- */
-package lruproxy;
+package test;
 
+import lruproxy.CacheList;
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.experimental.runners.Enclosed;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+
+import java.io.File;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Random;
+
+import static org.junit.Assert.assertEquals;
+
+/*
+ * @author Nick Borne
+ * @since Nov 28, 2016
+ *
+ * MRU CacheList Unit Test
+ *
+ */
+
+import java.io.File;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Random;
@@ -15,9 +33,10 @@ import org.junit.experimental.runners.Enclosed;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
+import lruproxy.CacheList;
 
 @RunWith(Enclosed.class)
-public class CacheListTest {
+public class TestMRU {
 
     @RunWith(value = Parameterized.class)
     public static class CacheListParam {
@@ -26,8 +45,10 @@ public class CacheListTest {
         private int CurrentSize;
         private String ExpectedVal;
         private CacheList instance;
+        private String directory = "src" + File.separator + "test" + File.separator +
+                "testdir";
         private final String[] Websites = {"www.google.com", "www.facebook.com", "www.youtube.com",
-            "www.nku.edu", "www.amazon.com", "www.someothersite.com"};
+                "www.nku.edu", "www.amazon.com", "www.someothersite.com"};
 
         public CacheListParam(String cacheSize, String currentSize, String exp) {
             this.CacheSize = Integer.parseInt(cacheSize);
@@ -35,19 +56,19 @@ public class CacheListTest {
             this.ExpectedVal = exp;
         }
 
-        @Parameters
+        @Parameterized.Parameters
         public static Collection<String[]> getTestParameters() {
-            String[][] params = {{"0", "1", "www.someothersite.com"}, {"1", "1", "www.someothersite.com"},
-            {"2", "2", "www.amazon.com"}, {"3", "3", "www.nku.edu"}, {"4", "4", "www.youtube.com"},
-            {"5", "5", "www.facebook.com"}, {"6", "6", "www.google.com"}, {"7", "6", ""}, {"8", "6", ""}};
 
+            String[][] params = {{"0", "1", "www.google.com"}, {"1", "1", "www.google.com},"},
+                    {"2", "2", "www.facebook.com"}, {"3", "3", "www.youtube.com"}, {"4", "4", "www.nku.edu"},
+                    {"5", "5", "www.amazon.com"}, {"6", "6", "www.someothersite.com"}, {"7", "6", ""}, {"8", "6", ""}};
             return Arrays.asList(params);
         }
 
         @Before
         public void setUp() {
-            boolean hit = false; // Ignoreing hit because CacheLog broken
-            this.instance = new CacheList("", this.CacheSize);
+            boolean hit = false;
+            this.instance = new CacheList(directory, this.CacheSize, 1);
             for (String Website : this.Websites) {
                 instance.addNewObject(Website, hit);
             }
@@ -59,17 +80,18 @@ public class CacheListTest {
         @Test
         public void testAddNewObject() {
             String URL = "www.google.com";
-            boolean hit = false; // Ignoreing hit because CacheLog broken
-            System.out.println("addNewObject: CaheSize = " + this.CacheSize + " | Expected return to be " + this.ExpectedVal);
+            boolean hit = false;
+            System.out.println("addNewObject: CacheSize = " + this.CacheSize + " | Expected return to be " + this.ExpectedVal);
             assertEquals(this.ExpectedVal, instance.addNewObject(URL, hit));
         }
+
 
         /**
          * Test of getCacheSize method, of class CacheList.
          */
         @Test
         public void testGetCacheSize() {
-            System.out.println("getCacheSize: CaheSize = " + this.CurrentSize + " | Expected return to be " + this.CurrentSize
+            System.out.println("getCacheSize: CacheSize = " + this.CurrentSize + " | Expected return to be " + this.CurrentSize
                     + " and got " + instance.getCacheSize());
 
             assertEquals(this.CurrentSize, instance.getCacheSize());
@@ -91,7 +113,7 @@ public class CacheListTest {
         private final int CacheSize = 10;
         private CacheList instance;
         private final String[] Websites = {"www.google.com", "www.facebook.com", "www.youtube.com",
-            "www.nku.edu", "www.amazon.com", "www.someothersite.com"};
+                "www.nku.edu", "www.amazon.com", "www.someothersite.com"};
 
         @Before
         public void setUp() {

@@ -1,0 +1,75 @@
+<project name="LRUProxy" default="report">
+	<property file="build.properties" />
+	<property name="src.dir" location="src" />
+	<property name="lib.dir" location="lib"/>
+	<property name="src.lruproxy.dir" location="${src.dir}/lruproxy" />
+	<property name="src.test.dir" location="${src.dir}/test" />
+	<property name="target.dir" location="target" />
+	<property name="target.classes.lruproxy.dir" location="${target.dir}/classes/lruproxy" />
+	<property name="target.classes.test.dir" location="${target.dir}/classes/test" />
+	<property name="target.report.dir" location="${target.dir}/report" />
+
+	<path id="classpath">
+		<fileset dir="lib" includes="**/*.jar" />
+	</path>
+	
+	<target name="checkout.repository" description="checkout code">
+		<macrodef name = "git">
+			<attribute name = "command" />
+			<attribute name = "dir" default = "" />
+			<element name = "args" optional = "true" />
+			<sequential>
+				<echo message = "git @{command}" />
+				<exec executable = "git" dir = "@{dir}"  failonerror="true">
+					<arg value = "@{command}" />
+					<args/>
+				</exec>
+			</sequential>
+		</macrodef>
+		<git command = "pull">
+			<args>
+				<arg value = "https://github.com/murphym2/CSC439.git" />
+			</args>
+		</git>
+	</target>
+	
+	<target name="compile.java" depends="checkout.repository">
+			<mkdir dir="${target.classes.lruproxy.dir}" />
+			<javac destdir="${target.classes.lruproxy.dir}" classpathref="classpath" includeantruntime="true">
+				<src path="${src.lruproxy.dir}" />
+			</javac>
+	</target>
+		
+	<target name="compile.test" depends="compile.java">
+			<mkdir dir="${target.classes.test.dir}" />
+			<javac destdir="${target.classes.test.dir}" classpathref="classpath" includeantruntime="true">
+				<src path="${src.test.dir}" />
+				<classpath>
+					<pathelement location="${target.classes.lruproxy.dir}" />
+				</classpath>
+			</javac>
+	</target>
+	
+	<target name="compile" depends="compile.java, compile.test" />
+	<target name="test" depends="compile">
+		<mkdir dir="${target.report.dir}"/>
+		<junit printsummary="yes" haltonerror="yes" haltonfailure="yes" fork="yes" includeantruntime="true">
+			<classpath refid="classpath"/>
+			<formatter type="xml" />
+			<test name="test.TestCacheSuite" todir="${target.report.dir}"/>
+				<classpath>
+					<pathelement location="${target.classes.lruproxy.dir}"/>
+					<pathelement location="${target.classes.test.dir}"/>
+				</classpath>
+		</junit>
+	</target>
+	<target name="report" depends="test">
+		<mkdir dir="${target.report.dir}/html"/>
+		<junitreport todir="${target.report.dir}">
+			<fileset dir="${target.report.dir}">
+				<include name="TEST-*.xml"/>
+			</fileset>
+			<report todir="${target.report.dir}/html"/>
+		</junitreport>
+	</target>
+</project>

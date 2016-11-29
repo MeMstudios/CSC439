@@ -1,13 +1,18 @@
+package test;
+
 import static org.junit.Assert.*;
 import org.junit.Test;
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.File;
 import java.io.IOException;
 import java.util.stream.Stream;
+import lruproxy.CacheLog;
 
 /**
  * Created by ethan on 9/21/16.
  * CSC 439 -- Team 3
+ *
  */
 
 //NOTE:
@@ -15,9 +20,9 @@ import java.util.stream.Stream;
 public class TestCacheLog {
 
     //Path to whatever folder
-    private String srcPath = "LRUProxy/src/test";
-    private String testdir = "/testdir";
-    private String output = "/output.log";
+    private String srcPath = "src" + File.separator + "test";
+    private String testdir = File.separator + "testdir";
+    private String output = File.separator + "output.log";
 
     //method for counting lines in a file
     //we will use this to make sure the logging is occuring properly
