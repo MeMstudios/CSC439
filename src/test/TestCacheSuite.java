@@ -11,7 +11,9 @@ import org.junit.runners.Suite.SuiteClasses;
 		TestCacheList.class,
 		TestCacheLog.class,
 		TestCacheRequest.class,
-		TestCacheToFile.class
+		TestCacheToFile.class,
+		TestRR.class,
+		TestMRU.class		
 })
 
 public class TestCacheSuite {
