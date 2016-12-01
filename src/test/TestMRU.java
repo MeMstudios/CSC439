@@ -59,9 +59,9 @@ public class TestMRU {
         @Parameterized.Parameters
         public static Collection<String[]> getTestParameters() {
 
-            String[][] params = {{"0", "1", "www.google.com"}, {"1", "1", "www.google.com},"},
-                    {"2", "2", "www.facebook.com"}, {"3", "3", "www.youtube.com"}, {"4", "4", "www.nku.edu"},
-                    {"5", "5", "www.amazon.com"}, {"6", "6", "www.someothersite.com"}, {"7", "6", ""}, {"8", "6", ""}};
+            String[][] params = {{"0", "1", "www.someothersite.com"}, {"1", "1", "www.someothersite.com"},
+                    {"2", "2", "www.someothersite.com"}, {"3", "3", "www.someothersite.com"}, {"4", "4", "www.someothersite.com"},
+                    {"5", "5", "www.someothersite.com"}, {"6", "6", "www.someothersite.com"}, {"7", "6", ""}, {"8", "6", ""}};
             return Arrays.asList(params);
         }
 
@@ -83,6 +83,7 @@ public class TestMRU {
             boolean hit = false;
             System.out.println("addNewObject: CacheSize = " + this.CacheSize + " | Expected return to be " + this.ExpectedVal);
             assertEquals(this.ExpectedVal, instance.addNewObject(URL, hit));
+
         }
 
 
@@ -118,7 +119,7 @@ public class TestMRU {
         @Before
         public void setUp() {
             boolean hit = false; // Ignoreing hit because CacheLog broken
-            this.instance = new CacheList("", this.CacheSize);
+            this.instance = new CacheList("", this.CacheSize, 1);
             for (String Website : this.Websites) {
                 instance.addNewObject(Website, hit);
             }
