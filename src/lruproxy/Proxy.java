@@ -21,9 +21,14 @@ public class Proxy
 	private String directory;
 	private boolean windows;
 	private int sleepSeconds;
+	private int method;
 	
-	public Proxy(String inDirectory, int maxCacheSize, int sleepSeconds)
+	public Proxy(String inDirectory, int maxCacheSize, int sleepSeconds, int method)
 	{
+		//add method assignment
+
+		this.method = method;
+
 		if (sleepSeconds<0)
 		{
 			sleepSeconds=0;
@@ -59,7 +64,7 @@ public class Proxy
 			
 				cacheLog = new CacheLog(directory);
 				cacheRequest= new CacheRequest(directory);
-				cacheList = new CacheList(directory, maxCacheSize);
+				cacheList = new CacheList(directory, maxCacheSize, method);
 				cacheToFile = new CacheToFile(directory);
 				miniHttp=new MiniHttp();
 			
@@ -90,7 +95,7 @@ public class Proxy
 		// reads a set number of requests and the
 		// stops.  So, we'll loop through the
 		// file and stop when we reach the end.
-		String url="";
+		String url;
 		do
 		{
 			// Step 1: read request from file.
@@ -171,10 +176,23 @@ public class Proxy
 		}
 		return returnValue;
 	}
-	
+
+	/**
+	 *
+	 * @param args
+	 * This main method takes four arguments
+	 * The first argument is a string specifying the directory where input.txt is located
+	 * The second argument is an integer specifying the max cache size
+	 * The third argument is an integer specifying the number of seconds to sleep between requests
+	 * The fourth argument is an integer specifying which replacement strategy to use
+	 * 0 - LRU default
+	 * 1 - MRU
+	 * 2 - LFU
+	 * 3- RR
+	 */
 	public static void main(String args[])
 	{
-		if (args.length==3)
+		if (args.length==4)
 		{
 			try
 			{
@@ -183,7 +201,9 @@ public class Proxy
 				int maxCacheSize=Integer.parseInt(temp);
 				temp=args[2];
 				int sleepSeconds=Integer.parseInt(temp);
-				Proxy proxy=new Proxy(directory, maxCacheSize, sleepSeconds);
+				temp=args[3];
+				int method = Integer.parseInt(temp);
+				Proxy proxy=new Proxy(directory, maxCacheSize, sleepSeconds, method);
 				proxy.run();
 			}
 			catch (Exception e)
@@ -197,6 +217,7 @@ public class Proxy
 			System.out.println("directory where input.txt resides");
 			System.out.println("maximum number of cached web pages (integer, minimum is 1)");
 			System.out.println("number of seconds to sleep between checking for requests (integer, minimum is 0)");
+			System.out.println("The method of replacement to use as an integer -- 0 for LRU, 1 MRU, 2 LFU, 3 RR");
 		}
 	}
 }
