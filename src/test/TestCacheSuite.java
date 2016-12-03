@@ -13,7 +13,8 @@ import org.junit.runners.Suite.SuiteClasses;
 		TestCacheRequest.class,
 		TestCacheToFile.class,
 		TestRR.class,
-		TestMRU.class		
+		TestMRU.class,
+		TestLFU.class
 })
 
 public class TestCacheSuite {
