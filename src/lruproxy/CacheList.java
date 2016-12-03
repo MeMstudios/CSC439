@@ -91,11 +91,13 @@ public class CacheList
 			removedURL = getLeastFrequent();
 			log.logRemoval(removedURL);
 			linkedList.removeFirstOccurrence(removedURL);
+			frequency.remove(removedURL);
 		}
 
 		// Newest is always the first.
 		linkedList.addFirst(URL);
-		frequency.put(URL, 0);
+		if(frequency.get(URL) == null)	// If the URL is being added to the cache, add a frequency for it as well.
+			frequency.put(URL, 0);
 
 		return removedURL;
 	}
@@ -114,7 +116,8 @@ public class CacheList
 				min = entry;
 			}
 		}
-		return min.getKey();
+		// Return null if the cache is empty, else return the LFU URL.
+		return (min==null) ? null : min.getKey();
 	}
 	
 	/**
