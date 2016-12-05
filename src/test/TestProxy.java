@@ -16,10 +16,14 @@ import lruproxy.Proxy;
  * TestProxy
  * @author: Mikael Soto
  * @author: Ethan Gallagher ( modified 12/4 )
- * 
+ *
  * Test program for non-functional testing. Measures the amount of time
  * taken for each replacement strategy with the same cache size and
  * time interval between reads.
+ *
+ * These test methods do not register as "passed" in JUnit. This issue appears to be related to
+ * the calls made to Proxy.main() . However, this is irrelevant for this test class as all the code
+ * for the non-functional tests is executed, with the results stored in /data/nonfunc_output.txt 
  */
 public class TestProxy {
 	public static final int cacheSize = 3, interval = 0;
