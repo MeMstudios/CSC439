@@ -133,7 +133,11 @@ public class TestRR {
         public static void testRandomness(){
             //We would not expect divergence to be zero after so many tests
             double divergence = 1.0 - hits/repl;
-            assertNotEquals( 0.0, divergence );
+            boolean rand = false;
+            if ( divergence > 0.0 ){
+                rand = true;
+            }
+            assertEquals( true, rand );
             System.out.println("Divergence from LRU : " + divergence );
         }
 
